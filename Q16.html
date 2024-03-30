@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            margin: 0;
+            padding: 0;
+            position: fixed;
+        }
+
+        nav ul {
+            border: 1px solid black;
+            margin: 0;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            background: black;
+            padding: 10px;
+            color: white;
+            font-size: 20px; /* Reduced font size for better visibility */
+            font-weight: bolder;
+            width: 200px; /* Adjusted width for better spacing */
+            position: relative; /* Added relative positioning */
+        }
+
+        nav ul li:last-child {
+            border: none;
+        }
+
+        nav ul li:hover {
+            color: rgb(193, 212, 212);
+            transition: 1s;
+        }
+
+        nav ul li:hover a {
+            color: rgb(214, 206, 206);
+        }
+
+        nav ul li {
+            text-decoration: none;
+            display: block;
+            float: left;
+            box-shadow: 1px 1px 3px red;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            display: block;
+            color: white;
+        }
+
+        li ul {
+            display: none;
+            position: absolute;
+            top: 100%; /* Adjusted position to appear below the parent */
+            left: 0;
+            background: black; /* Added background color */
+        }
+
+        li:hover ul {
+            display: block;
+        }
+
+        li ul li {
+            float: none; /* Remove float to display vertically */
+        }
+
+        li ul li a {
+            color: white;
+            padding: 10px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a>
+                <ul>
+                    <li><a href="#">Academics</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Campus</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

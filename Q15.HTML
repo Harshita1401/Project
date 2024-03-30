@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Float Layout Template</title>
+<style>
+    body {
+        font-family:'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        background-color: #14c38e;
+    }
+
+    header {
+        background-color: #70978c;
+        color: #1665a1;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 2px solid blueviolet;
+    }
+
+    .container {
+        width: 80%;
+        margin: 20px auto;
+        overflow: hidden; /* clearfix */
+       
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+        box-sizing: border-box; /* includes padding and border in width calculation */
+        border: 2px solid #333;
+        background-color: #2282cb;
+        padding: 20px;
+    }
+
+    .column:nth-child(odd) {
+        border-right: none; /* Removing right border for the first column */
+    }
+
+    @media (max-width: 768px) {
+        .column {
+            width: 100%; /* Full width on smaller screens */
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>velit</h1>
+</header>
+
+<div class="container">
+    <div class="column">
+        <p>Paragraph 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non blandit justo. Aliquam nec nulla ut dui fringilla malesuada.</p>
+    </div>
+    <div class="column">
+        <p>Paragraph 2: Duis eget odio velit. Vivamus vel sapien sit amet metus sagittis congue. Phasellus fermentum nunc sed ante egestas posuere.</p>
+    </div>
+</div>
+
+</body>
+</html>

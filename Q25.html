@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            window.onload = function() {
+                var temperature = prompt("Enter the temperature and kindly show the unit of temperature: like c, f, k");
+                document.write("Temperature entered: " + temperature);
+                alert("Temperature entered: " + temperature);
+
+                if (temperature.slice(-1) === 'k') {
+                    var celsius1 = 273.15 - parseFloat(temperature);
+                    document.write("<br>Celsius: " + celsius1);
+                    var F2 = (parseFloat(temperature) - 273.15) * 1.8 + 32;
+                    document.write("<br>Fahrenheit: " + F2);
+                }
+                if (temperature.slice(-1) === 'c') {
+                    var F1 = (parseFloat(temperature) * 9/5) + 32;
+                    document.write("<br>Fahrenheit: " + F1);
+                    var K1 = parseFloat(temperature) + 273.15;
+                    document.write("<br>Kelvin: " + K1);
+                }
+                if (temperature.slice(-1) === 'f') {
+                    var K2 = (5/9) * (parseFloat(temperature) + 459.67);
+                    document.write("<br>Kelvin: " + K2);
+                    var C1 = (5/9) * (parseFloat(temperature) - 32);
+                    document.write("<br>Celsius: " + C1);
+                }
+            };
+        </script>
+    </body>
+</html>

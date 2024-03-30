@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+    
+    .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .card-content {
+        padding: 20px;
+    }
+    
+    .card-title {
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    
+    .card-date {
+        color: #666;
+        margin-bottom: 10px;
+    }
+    
+    .card-description {
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+<div class="container" id="events-container">
+</div>
+
+<script>
+   
+    var events = [
+        {
+            image: "indiagate.jpg",
+            title: "Event 1",
+            date: "March 15, 2024",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur, massa at consequat fringilla."
+        },
+        {
+            image: "hawamahal.webp",
+            title: "Event 2",
+            date: "March 20, 2024",
+            description: "Sed ac ligula ultricies, porttitor eros in, blandit metus. Duis id eros purus. Cras vel odio eget arcu malesuada fringilla."
+        },
+        {
+            image: "jaipur.jpg",
+            title: "Event 3",
+            date: "March 25, 2024",
+            description: "Nulla facilisi. Fusce et ultrices lorem, eu volutpat ipsum. Sed hendrerit, ligula in efficitur efficitur."
+        }
+    ];
+
+   
+    function generateEventCards() {
+        var container = document.getElementById("events-container");
+        container.innerHTML = "";
+
+        events.forEach(function(event) {
+            var card = document.createElement("div");
+            card.classList.add("card");
+
+            var image = document.createElement("img");
+            image.src = event.image;
+
+            var cardContent = document.createElement("div");
+            cardContent.classList.add("card-content");
+
+            var title = document.createElement("h2");
+            title.classList.add("card-title");
+            title.textContent = event.title;
+
+            var date = document.createElement("p");
+            date.classList.add("card-date");
+            date.textContent = event.date;
+
+            var description = document.createElement("p");
+            description.classList.add("card-description");
+            description.textContent = event.description;
+
+            cardContent.appendChild(title);
+            cardContent.appendChild(date);
+            cardContent.appendChild(description);
+
+            card.appendChild(image);
+            card.appendChild(cardContent);
+
+            container.appendChild(card);
+        });
+    }
+
+    // Call the function to generate event cards
+    generateEventCards();
+</script>
+</body>
+</html>

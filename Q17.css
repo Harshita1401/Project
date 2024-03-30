@@ -1,0 +1,16 @@
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+img {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.2);
+}

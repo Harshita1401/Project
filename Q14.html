@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+           height: 200px;
+           width: 200px;
+           background-color: red;
+           color: white;
+           font-size: 40px;
+           font-weight: 700;
+           margin: 10px;
+        }
+        .container{
+            display: flex;
+            width: auto;
+            height: 100vmin;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+        }
+        .black{
+            background-color: black;
+        }
+        .container div{
+            display: flex;
+            justify-content: center;
+            align-content: space-evenly;
+            align-items: center;
+            border: blue 10px double;
+        }
+        .d1{
+            position: relative;
+            
+        }
+        .d1 img{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container black">
+        <div class="d1">
+            <img src="images/19.jpg" alt="">1
+            <span style="z-index: 10">1</span>
+        </div>
+        <div class="d2">
+            <img src="images/13.jpeg">
+            
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+</body>
+</html>

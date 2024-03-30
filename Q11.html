@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body bgcolor="#C9FD0D">
+    <form method="post" action="Home.html">
+        <fieldset>
+            <legend>Login Info</legend>
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="Enter username" value="admin" size="30" minlength="4"
+                maxlength="6" required /><br>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" placeholder="Enter password" /><br>
+        </fieldset>
+        <br><br>
+        <label for="age">Enter Age</label>
+        <input type="range" name="age" min="1" max="150" />Years <br>
+
+        <label for="dob">DOB:</label>
+        <input type="date" name="dob" /> <br>
+
+        <label for="color">Choose Color</label>
+        <input type="color" /><br>
+
+        <label for="branch">Choose your branch</label>
+        <input type="radio" name="branch" value="IT" checked />IT
+        <input type="radio" name="branch" value="CS" />CS
+        <input type="radio" name="branch" value="MT" />MT<br>
+
+        <label for="gender">gender</label for>
+        <input type="radio" name="gender" value="f" />female
+        <input type="radio" name="gender" value="m" />male<br>
+
+        <input type="checkbox" name="Hobbies" value="R" checked>Reading <br>
+        <input type="checkbox" name="Hobbies" value="W">Writing <br>
+        <input type="checkbox" name="Hobbies" value="F">Fighting <br>
+        <input type="checkbox" name="Hobbies" value="P" checked>Proxy <br><br>
+
+        <label for="address">Your Address:</label>
+        <textarea name="address" rows="5" cols="30" placeholder="Enter your address"></textarea><br>
+
+        <label for="city">City</label>
+        <input type="text" name="city" list="ct" /><br>
+        <datalist id="ct">
+            <option>Tonk</option>
+            <option>Jaipur</option>
+            <option>Jodhpur</option>
+            <option>Jalore</option>
+        </datalist><br>
+
+        <label for="state">State</label>
+        <select name="state" id="" size="4" multiple>
+            <option value="RJ">Rajasthan</option>
+            <option value="GJ">Gujarat</option>
+            <option value="PJ">Punjab</option>
+            <option value="UK">UK</option>
+        </select><br>
+
+        <input type="Reset" name="reset" value="Reset">
+        <input type="Submit" name="submit" value="Login">
+        <input type="button" value="Register">
+
+        <input type="text" list="11" name="x" />
+        <datalist id="11">
+            <option>sunday</option>
+            <option>monday</option>
+            <option>tuesday</option>
+            <option>wednesday</option>
+            <option>thrusday</option>
+            <option>friday</option>
+            <option>saturday</option>
+        </datalist>
+    </form>
+</body>
+
+</html>

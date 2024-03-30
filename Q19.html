@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2D Array using JavaScript</title>
+</head>
+<body>
+    <script>
+      
+        var a = prompt("Enter the number of rows:");
+        var b = prompt("Enter the number of columns:");
+
+      
+        a = parseInt(a);
+        b = parseInt(b);
+
+       
+        var arr = [];
+
+       
+        for (var i = 0; i < a; i++) {
+            arr[i] = [];
+            for (var j = 0; j < b; j++) {
+                arr[i][j] = prompt("Enter element at position (" + i + ", " + j + "):");
+            }
+        }
+
+      
+        document.write('<table border="1">');
+        for (var i = 0; i < a; i++) {
+            document.write('<tr>');
+            for (var j = 0; j < b; j++) {
+                var bgcolor = (j % 2 == 0) ? 'red' : 'black'; 
+                document.write('<td style="background-color:' + bgcolor + '">' + arr[i][j] + '</td>');
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+</body>
+</html>
